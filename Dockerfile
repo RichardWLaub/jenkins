@@ -6,3 +6,4 @@ RUN wget https://download.docker.com/linux/static/stable/x86_64/docker-17.03.1-c
  && chmod +x /usr/bin/docker \
  && rm -fr docker*
 COPY jenkins_home /usr/share/jenkins/ref
+COPY jenkins.sh /usr/local/bin/jenkins.sh
