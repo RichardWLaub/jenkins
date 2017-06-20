@@ -1,0 +1,18 @@
+Started by an SCM change
+hudson.plugins.git.GitException: Command "git fetch --tags --progress origin +refs/heads/master:refs/remotes/origin/master --prune" returned status code 128:
+stdout: 
+stderr: fatal: unable to access 'https://github.com/@@GHUSER@@/webapp.git/': The requested URL returned error: 400
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:1903)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:1622)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.access$300(CliGitAPIImpl.java:71)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$1.execute(CliGitAPIImpl.java:348)
+	at jenkins.plugins.git.GitSCMFileSystem$BuilderImpl.build(GitSCMFileSystem.java:306)
+	at jenkins.scm.api.SCMFileSystem.of(SCMFileSystem.java:196)
+	at jenkins.scm.api.SCMFileSystem.of(SCMFileSystem.java:172)
+	at org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition.create(CpsScmFlowDefinition.java:99)
+	at org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition.create(CpsScmFlowDefinition.java:59)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:234)
+	at hudson.model.ResourceController.execute(ResourceController.java:98)
+	at hudson.model.Executor.run(Executor.java:405)
+Finished: FAILURE
